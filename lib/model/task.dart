@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class Task {
   String title;
   bool isDone;
-  DateTime createdTime;
-  DateTime? updatedTime;
+  Timestamp createdTime;
+  Timestamp? updatedTime;
 
   Task({
     required this.title,
