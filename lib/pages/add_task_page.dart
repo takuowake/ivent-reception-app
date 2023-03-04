@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class AddTaskPage extends StatefulWidget {
+  const AddTaskPage({super.key});
+
   @override
   State<AddTaskPage> createState() => _AddTaskPageState();
 }
@@ -22,27 +24,27 @@ class _AddTaskPageState extends State<AddTaskPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('タスクを追加'),
+        title: const Text('タスクを追加'),
       ),
       body: Center(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10.0),
               child: Text('タイトル'),
             ),
-            Container(
+            SizedBox(
                 width: 500,
                 child: TextField(
                   controller: titleController,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder()
                   ),
                 )
             ),
             Padding(
               padding: const EdgeInsets.only(top: 20.0),
-              child: Container(
+              child: SizedBox(
                 width: 250,
                 height: 50,
                 child: ElevatedButton(
@@ -50,7 +52,7 @@ class _AddTaskPageState extends State<AddTaskPage> {
                       await insertTask(titleController.text);
                       Navigator.pop(context);
                     },
-                    child: Text('追加')),
+                    child: const Text('追加')),
               ),
             )
           ],

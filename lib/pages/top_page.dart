@@ -6,7 +6,7 @@ import 'package:webtotop/pages/undone_task_page.dart';
 import '../model/task.dart';
 
 class TopPage extends StatefulWidget {
-  TopPage({super.key, required this.title});
+  const TopPage({super.key, required this.title});
   final String title;
 
   @override
@@ -22,7 +22,7 @@ class _TopPageState extends State<TopPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Firebase ×︎ Flutter for WEB'),
+        title: const Text('Firebase ×︎ Flutter for WEB'),
         backgroundColor: Colors.blueAccent,
       ),
       body: Stack(
@@ -30,7 +30,7 @@ class _TopPageState extends State<TopPage> {
         children: [
           showUndoneTaskPage
               ? UndoneTaskPage()
-              : DoneTaskPage(),
+              : const DoneTaskPage(),
           Row(
             children: [
               Expanded(
@@ -45,7 +45,7 @@ class _TopPageState extends State<TopPage> {
                     alignment: Alignment.center,
                     height: 50,
                     color: Colors.redAccent,
-                    child: Text(
+                    child: const Text(
                       '未完了タスク',
                       style: TextStyle(color: Colors.white, fontSize: 20),),
                   ),
@@ -63,7 +63,7 @@ class _TopPageState extends State<TopPage> {
                     alignment: Alignment.center,
                     height: 50,
                     color: Colors.greenAccent,
-                    child: Text('完了タスク', style: TextStyle(color: Colors.white, fontSize: 20),),
+                    child: const Text('完了タスク', style: TextStyle(color: Colors.white, fontSize: 20),),
                   ),
                 ),
               ),
@@ -73,7 +73,7 @@ class _TopPageState extends State<TopPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async{
-          await Navigator.push(context, MaterialPageRoute(builder: (context) => AddTaskPage()));
+          await Navigator.push(context, MaterialPageRoute(builder: (context) => const AddTaskPage()));
           setState(() {});
         },
         tooltip: 'Increment',
