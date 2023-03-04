@@ -6,7 +6,7 @@ import 'package:webtotop/pages/undone_task_page.dart';
 import '../model/task.dart';
 
 class TopPage extends StatefulWidget {
-  const TopPage({super.key, required this.title});
+  TopPage({super.key, required this.title});
   final String title;
 
   @override
@@ -14,13 +14,8 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  List<Task> undoneTaskList = [
-    Task(title: '宿題', isDone: false, createdTime: DateTime.now()),
-    Task(title: '買い出し', isDone: false, createdTime: DateTime.now()),
-    Task(title: '買い出し', isDone: false, createdTime: DateTime.now()),
-  ];
+  List<Task> undoneTaskList = [];
 
-  List<Task> doneTaskList = [];
   bool showUndoneTaskPage = true;
 
   @override
@@ -34,8 +29,8 @@ class _TopPageState extends State<TopPage> {
         alignment: Alignment.bottomCenter,
         children: [
           showUndoneTaskPage
-              ? UndoneTaskPage(undoneTaskList: undoneTaskList, doneTaskList: doneTaskList)
-              : DoneTaskPage(undoneTaskList: undoneTaskList, doneTaskList: doneTaskList),
+              ? UndoneTaskPage()
+              : DoneTaskPage(),
           Row(
             children: [
               Expanded(
@@ -78,7 +73,7 @@ class _TopPageState extends State<TopPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () async{
-          await Navigator.push(context, MaterialPageRoute(builder: (context) => AddTaskPage(undoneTaskList: undoneTaskList,)));
+          await Navigator.push(context, MaterialPageRoute(builder: (context) => AddTaskPage()));
           setState(() {});
         },
         tooltip: 'Increment',

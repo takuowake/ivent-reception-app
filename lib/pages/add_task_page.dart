@@ -1,17 +1,23 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../model/task.dart';
 
 class AddTaskPage extends StatefulWidget {
-  const AddTaskPage({Key? key, required this.undoneTaskList}) : super(key: key);
-  final List<Task> undoneTaskList;
-
   @override
   State<AddTaskPage> createState() => _AddTaskPageState();
 }
 
 class _AddTaskPageState extends State<AddTaskPage> {
   TextEditingController titleController = TextEditingController();
+
+  Future<void> insertTask(String title) async {
+    final collection = FirebaseFirestore.instance.collection('task');
+    collection.add({
+      'title': title,
+      'is_done': false,
+      'created_time': Timestamp.now()
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,16 +46,8 @@ class _AddTaskPageState extends State<AddTaskPage> {
                 width: 250,
                 height: 50,
                 child: ElevatedButton(
-                    onPressed: () {
-                      //①新しく追加するタスクを作成
-                      Task newTask  =Task(
-                        title: titleController.text,
-                        isDone: false,
-                        createdTime: DateTime.now()
-                      );
-                      //②作成したタスクを未完了タスクリストに追加
-                      widget.undoneTaskList.add(newTask);
-                      //③追加が完了すれば下の画面に遷移
+                    onPressed: () async{
+                      await insertTask(titleController.text);
                       Navigator.pop(context);
                     },
                     child: Text('追加')),
