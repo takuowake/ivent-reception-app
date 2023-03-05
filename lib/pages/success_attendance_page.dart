@@ -37,8 +37,8 @@ class _SuccessAttendanceState extends State<SuccessAttendance> {
         child: Container(
           width: 500,
           height: 300,
-          decoration: BoxDecoration(color: Colors.blueAccent),
-          child: Center(
+          decoration: const BoxDecoration(color: Colors.blueAccent),
+          child: const Center(
             child: Text(
               '当イベントにご参加いただき\nありがとうございます。\n\n受付が完了いたしました。',
               style: TextStyle(

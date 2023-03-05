@@ -28,7 +28,7 @@ class _TopPageState extends State<TopPage> {
         alignment: Alignment.bottomCenter,
         children: [
           showUnconfirmedNamePage
-              ? UnconfirmedNamePage()
+              ? const UnconfirmedNamePage()
               : const AttendanceNamePage(),
           Row(
             children: [

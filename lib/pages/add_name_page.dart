@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:webtotop/pages/check_form.dart';
 
 
 class AddNamePage extends StatefulWidget {
@@ -81,6 +82,18 @@ class _AddNamePageState extends State<AddNamePage> {
                       Navigator.pop(context);
                     },
                     child: const Text('追加')),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white
+                ),
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const CheckForm()));
+                },
+                child: const Text('参加者フォームへ移動', style: TextStyle(color: Colors.black))
               ),
             )
           ],

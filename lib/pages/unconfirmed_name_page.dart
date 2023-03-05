@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class UnconfirmedNamePage extends StatefulWidget {
+  const UnconfirmedNamePage({super.key});
+
   @override
   State<UnconfirmedNamePage> createState() => _UnconfirmedNamePageState();
 }
@@ -39,7 +41,7 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                       });
                     },
                     secondary: IconButton(
-                      icon: Icon(Icons.more_horiz),
+                      icon: const Icon(Icons.more_horiz),
                       onPressed: () {
                         //ボトムシートを表示
                         showModalBottomSheet(context: context, builder: (context) {
@@ -47,8 +49,8 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               ListTile(
-                                title: Text('編集'),
-                                leading: Icon(Icons.edit),
+                                title: const Text('編集'),
+                                leading: const Icon(Icons.edit),
                                 onTap: () {
                                   //編集の処理
                                   //①ボトムシートを非表示
@@ -56,24 +58,24 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                   //②編集用のダイアログを表示
                                   showDialog(context: context, builder: (context) {
                                     return SimpleDialog(
-                                      titlePadding: EdgeInsets.all(20),
+                                      titlePadding: const EdgeInsets.all(20),
                                       title: Container(
                                         color: Colors.white,
                                         child: Column(
                                           children: [
-                                            Text('タイトル先を編集'),
-                                            Container(
+                                            const Text('タイトル先を編集'),
+                                            SizedBox(
                                               width: 500,
                                               child: TextField(
                                                 controller: editNameController,
-                                                decoration: InputDecoration(
+                                                decoration: const InputDecoration(
                                                     border: OutlineInputBorder()
                                                 ),
                                               ),
                                             ),
                                             Padding(
                                               padding: const EdgeInsets.only(top: 30.0),
-                                              child: Container(
+                                              child: SizedBox(
                                                 width: 200,
                                                 height: 30,
                                                 child: ElevatedButton(
@@ -81,9 +83,10 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                                     await snapshot.data?.docs[index].reference.update({
                                                       'name': editNameController.text
                                                     });
+                                                    if(!mounted) return;
                                                     Navigator.pop(context);
                                                   },
-                                                  child: Text('編集'),
+                                                  child: const Text('編集'),
                                                 ),
                                               ),
                                             ),
@@ -101,8 +104,8 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                               endIndent: 16,
                               ),
                               ListTile(
-                                title: Text('削除'),
-                                leading: Icon(Icons.delete),
+                                title: const Text('削除'),
+                                leading: const Icon(Icons.delete),
                                 onTap: () {
                                   //削除の処理
                                   //①ボトムシートを非表示
@@ -117,13 +120,13 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                               snapshot.data?.docs[index].reference.delete();
                                               Navigator.pop(context);
                                             },
-                                            child: Text('はい')
+                                            child: const Text('はい')
                                         ),
                                         TextButton(
                                           onPressed: () {
                                             Navigator.pop(context);
                                           },
-                                          child: Text('キャンセル'),
+                                          child: const Text('キャンセル'),
                                         ),
                                       ],
                                     );

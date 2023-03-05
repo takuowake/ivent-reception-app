@@ -81,6 +81,7 @@ class _AttendanceNamePageState extends State<AttendanceNamePage> {
                                                 await snapshot.data?.docs[index].reference.update({
                                                   'name': editNameController.text
                                                 });
+                                                if(!mounted) return;
                                                 Navigator.pop(context);
                                               },
                                               child: const Text('編集'),

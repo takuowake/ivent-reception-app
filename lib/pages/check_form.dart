@@ -23,14 +23,16 @@ class _CheckFormState extends State<CheckForm> {
       // 参加者が見つかった場合、出席状況を更新
       final participant = participants.docs.first;
       await participant.reference.update({'attendance': true});
-      Navigator.push(context, MaterialPageRoute(builder: (context) => SuccessAttendance(name: '',)),);
+      if(!mounted) return;
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const SuccessAttendance(name: '',)),);
     } else {
         // 参加者が見つからなかった場合、エラーメッセージを表示
+      if(!mounted) return;
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Text('⚠️エラー️', textAlign: TextAlign.center,),
-            content: Text(
+            title: const Text('⚠️エラー️', textAlign: TextAlign.center,),
+            content: const Text(
               'ご入力されたお名前が見つかりませんでした。\nもう一度、ご登録されたお名前を入力いただく\nもしくは、スタッフまでお声掛けください。',
               style: TextStyle(
                 fontSize: 12.5
@@ -40,7 +42,7 @@ class _CheckFormState extends State<CheckForm> {
             actions: [
               TextButton(
                   onPressed: () => Navigator.pop(context),
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           ),
@@ -63,10 +65,10 @@ class _CheckFormState extends State<CheckForm> {
             children: [
               TextFormField(
                 controller: myController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'お名前をご入力ください',
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                 ),
                 onChanged: (text) {
@@ -76,7 +78,7 @@ class _CheckFormState extends State<CheckForm> {
               Padding(
                 padding: const EdgeInsets.only(top: 30.0),
                 child: ElevatedButton(
-                  child: Text('出席'),
+                  child: const Text('出席'),
                   onPressed: () async {
                     // 参加者の出席を更新
                     await updateAttendance(name);
