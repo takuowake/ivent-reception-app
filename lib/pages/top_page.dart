@@ -21,7 +21,7 @@ class _TopPageState extends State<TopPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('イベント出欠管理アプリ'),
+        title: const Text('イベント出席管理アプリ'),
         backgroundColor: Colors.blueAccent,
       ),
       body: Stack(
