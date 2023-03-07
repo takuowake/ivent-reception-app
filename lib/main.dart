@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 import 'package:webtotop/firebase_options.dart';
 import 'package:webtotop/pages/check_form.dart';
 
@@ -10,6 +11,7 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  setUrlStrategy(PathUrlStrategy());
   runApp(const MyApp());
 }
 
@@ -23,10 +25,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      // home: const CheckForm(),
-      home: const TopPage(name: '',),
+
+      routes: {
+        '/': (context) => TopPage(name: ''),
+        '/check-form': (context) => CheckForm(),
+      },
     );
   }
 }
-
-
