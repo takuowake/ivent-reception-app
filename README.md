@@ -1,17 +1,22 @@
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
-
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
-
-"hoge"が何かを簡潔に紹介する
+# Ivent Reception App
 
 # DEMO
 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+https://user-images.githubusercontent.com/74645968/223755609-830742dd-8350-486e-863f-0f0e24308a82.mp4
+
 
 # Features
+<div>
+  <h2>My Images</h2>
+  <ul style="display: flex; justify-content: center; padding: 0;">
+    <li style="list-style: none; margin: 0 10px;"><img src="/img/2.jpg" width="450"></li>
+    <li style="list-style: none; margin: 0 10px;"><img src="/img/3.jpg" width="500"></li>
+  </ul>
+</div>
 
-"hoge"のセールスポイントや差別化などを説明する
 
+
+https://www.canva.com/design/DAFcnWYmk1A/view
 # Requirement
 
 "hoge"を動かすのに必要なライブラリなどを列挙する
