@@ -1,0 +1,10 @@
+/* style.css */
+.image-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+.image-list li {
+  margin: 0 10px;
+}
