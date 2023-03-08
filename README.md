@@ -6,59 +6,52 @@ https://user-images.githubusercontent.com/74645968/223755609-830742dd-8350-486e-
 
 
 # Features
+
 <div>
-  <h2>My Images</h2>
-  <ul style="display: flex; justify-content: center; padding: 0;">
-    <li style="list-style: none; margin: 0 10px;"><img src="/img/2.jpg" width="450"></li>
-    <li style="list-style: none; margin: 0 10px;"><img src="/img/3.jpg" width="500"></li>
-  </ul>
+  <h2>画面紹介</h2>
+  <div style="display: flex; justify-content: center;">
+    <img src="/img/2.jpg" width="450" style="margin-right: 10px;">
+    <img src="/img/3.jpg" width="450" style="margin-left: 10px;">
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <img src="/img/4.jpg" width="450" style="margin-right: 10px;">
+    <img src="/img/5.jpg" width="450" style="margin-left: 10px;">
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <img src="/img/6.jpg" width="450" style="margin-right: 10px;">
+    <img src="/img/7.jpg" width="450" style="margin-left: 10px;">
+  </div>
+  <div style="display: flex; justify-content: center;">
+    <img src="/img/8.jpg" width="450" style="margin-right: 10px;">
+    <img src="/img/9.jpg" width="450" style="margin-left: 10px;">
+  </div>
 </div>
 
+## [アプリ紹介スライド](https://www.canva.com/design/DAFcSRt9qow/GJ18NE5vTuwwLLGtAPnqWw/view?utm_content=DAFcSRt9qow&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 
-
-https://www.canva.com/design/DAFcnWYmk1A/view
 # Requirement
 
-"hoge"を動かすのに必要なライブラリなどを列挙する
+* Flutter 3.7.6
+* Dart 2.19.3
+* DevTools 2.20.1
+* pod 1.12.0
 
-* huga 3.5.2
-* hogehuga 1.0.2
 
 # Installation
 
-Requirementで列挙したライブラリなどのインストール方法を説明する
-
 ```bash
-pip install huga_package
+brew install cocoapods
+pod setup
 ```
 
 # Usage
 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
-
 ```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
+git clone https://github.com/takuowake/ivent-reception-app.git
+flutter run -d chrome
 ```
-
-# Note
-
-注意点などがあれば書く
 
 # Author
 
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
-
-# License
-ライセンスを明示する
-
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
+* Takuo Wake
+* E-mail:takuowake@gmail.com
