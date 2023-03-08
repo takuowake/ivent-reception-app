@@ -46,8 +46,7 @@ class _TopPageState extends State<TopPage> {
                     color: Colors.redAccent,
                     child: const Text(
                       '未確認',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
+                      style: TextStyle(color: Colors.white, fontSize: 20),),
                   ),
                 ),
               ),
