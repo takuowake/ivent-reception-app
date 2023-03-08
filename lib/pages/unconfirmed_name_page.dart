@@ -57,10 +57,7 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                       title: const Text('編集'),
                                       leading: const Icon(Icons.edit),
                                       onTap: () {
-                                        //編集の処理
-                                        //①ボトムシートを非表示
                                         Navigator.pop(context);
-                                        //②編集用のダイアログを表示
                                         showDialog(context: context, builder: (context) {
                                           return SimpleDialog(
                                             titlePadding: const EdgeInsets.all(20),
@@ -68,10 +65,10 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                               color: Colors.white,
                                               child: Column(
                                                 children: [
-                                                  const Text('タイトル先を編集'),
+                                                  const Text('名前を編集'),
                                                   SizedBox(
                                                     width: 500,
-                                                    child: TextField(
+                                                    child: TextFormField(
                                                       controller: editNameController,
                                                       decoration: const InputDecoration(
                                                           border: OutlineInputBorder()
@@ -94,6 +91,16 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                                         child: const Text('編集'),
                                                       ),
                                                     ),
+                                                  ),
+                                                  Row(
+                                                    mainAxisAlignment: MainAxisAlignment.start,
+                                                    children: [
+                                                      BackButton(
+                                                        onPressed: () {
+                                                          Navigator.of(context).pop();
+                                                        },
+                                                      ),
+                                                    ],
                                                   ),
                                                 ],
                                               ),
@@ -118,7 +125,7 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
                                         //②編集用のダイアログを表示
                                         showDialog(context: context, builder: (context) {
                                           return AlertDialog(
-                                            title: Text('${snapshot.data?.docs[index]['name']}を削除しますか？'),
+                                            title: Text('${snapshot.data?.docs[index]['name']}様を削除しますか？'),
                                             actions: [
                                               TextButton(
                                                   onPressed: () {

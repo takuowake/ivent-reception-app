@@ -328,14 +328,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
-  qr_flutter_fork:
-    dependency: "direct main"
-    description:
-      name: qr_flutter_fork
-      sha256: "567443baa71f04c4f42bb9606340269c55e8ec6108c6d4dd09493a1f11cf8a95"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.0"
   sky_engine:
     dependency: transitive
     description: flutter

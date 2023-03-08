@@ -104,6 +104,12 @@ class _AttendanceNamePageState extends State<AttendanceNamePage> {
                                       });
                                     },
                                   ),
+                                  Divider(
+                                    thickness: 1,
+                                    color: Colors.grey[300],
+                                    indent: 16,
+                                    endIndent: 16,
+                                  ),
                                   ListTile(
                                     title: const Text('削除'),
                                     leading: const Icon(Icons.delete),
@@ -114,7 +120,7 @@ class _AttendanceNamePageState extends State<AttendanceNamePage> {
                                       //②編集用のダイアログを表示
                                       showDialog(context: context, builder: (context) {
                                         return AlertDialog(
-                                          title: Text('${snapshot.data?.docs[index]['name']}を削除しますか？'),
+                                          title: Text('${snapshot.data?.docs[index]['name']}様を削除しますか？'),
                                           actions: [
                                             TextButton(
                                                 onPressed: () {
@@ -133,6 +139,12 @@ class _AttendanceNamePageState extends State<AttendanceNamePage> {
                                         );
                                       });
                                     },
+                                  ),
+                                  Divider(
+                                    thickness: 1,
+                                    color: Colors.grey[300],
+                                    indent: 16,
+                                    endIndent: 16,
                                   ),
                                   ListTile(
                                     title: const Text('未確認リストへ移動させる'),
