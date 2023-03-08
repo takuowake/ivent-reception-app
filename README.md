@@ -11,20 +11,20 @@ https://user-images.githubusercontent.com/74645968/223755609-830742dd-8350-486e-
 <div>
   <h2>画面紹介</h2>
   <div style="display: flex; justify-content: center;">
-    <img src="/img/2.jpg" width="450" style="margin-right: 10px;">
-    <img src="/img/3.jpg" width="450" style="margin-left: 10px;">
+    <img src="/img/2.jpg" width="300" style="margin-right: 10px;">
+    <img src="/img/3.jpg" width="300" style="margin-left: 10px;">
   </div>
   <div style="display: flex; justify-content: center;">
-    <img src="/img/4.jpg" width="450" style="margin-right: 10px;">
-    <img src="/img/5.jpg" width="450" style="margin-left: 10px;">
+    <img src="/img/4.jpg" width="300" style="margin-right: 10px;">
+    <img src="/img/5.jpg" width="300" style="margin-left: 10px;">
   </div>
   <div style="display: flex; justify-content: center;">
-    <img src="/img/6.jpg" width="450" style="margin-right: 10px;">
-    <img src="/img/7.jpg" width="450" style="margin-left: 10px;">
+    <img src="/img/6.jpg" width="300" style="margin-right: 10px;">
+    <img src="/img/7.jpg" width="300" style="margin-left: 10px;">
   </div>
   <div style="display: flex; justify-content: center;">
-    <img src="/img/8.jpg" width="450" style="margin-right: 10px;">
-    <img src="/img/9.jpg" width="450" style="margin-left: 10px;">
+    <img src="/img/8.jpg" width="300" style="margin-right: 10px;">
+    <img src="/img/9.jpg" width="300" style="margin-left: 10px;">
   </div>
 </div>
 
