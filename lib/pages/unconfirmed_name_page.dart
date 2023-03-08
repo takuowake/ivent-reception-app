@@ -23,9 +23,7 @@ class _UnconfirmedNamePageState extends State<UnconfirmedNamePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-            '未確認'
-        ),
+        title: const Text('未確認'),
         backgroundColor: Colors.redAccent,
       ),
         body: StreamBuilder<QuerySnapshot>(

@@ -36,9 +36,7 @@ class _TopPageState extends State<TopPage> {
                 child: InkWell(
                   onTap: () {
                     showUnconfirmedNamePage = true;
-                    setState(() {
-
-                    });
+                    setState(() {});
                   },
                   child: Container(
                     alignment: Alignment.center,
@@ -62,7 +60,7 @@ class _TopPageState extends State<TopPage> {
                     alignment: Alignment.center,
                     height: 50,
                     color: Colors.greenAccent,
-                    child: const Text('出席', style: TextStyle(color: Colors.white, fontSize: 20),),
+                    child: const Text('出席完了', style: TextStyle(color: Colors.white, fontSize: 20),),
                   ),
                 ),
               ),
