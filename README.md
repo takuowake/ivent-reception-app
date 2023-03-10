@@ -32,6 +32,9 @@ https://user-images.githubusercontent.com/74645968/223755609-830742dd-8350-486e-
 
 # Requirement
 
+* Mac OS
+* Android Studio Electric Eel | 2022.1.1 Patch 1
+* Firebase 11.23.1
 * Flutter 3.7.6
 * Dart 2.19.3
 * DevTools 2.20.1
